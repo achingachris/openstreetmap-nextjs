@@ -61,7 +61,7 @@ const Map2 = () => {
         </div>
       </div>
 
-      <div className='container'>
+      {/* <div className='container'>
         <div className='row my-4'>
           <div className='col d-flex justify-content-center'>
             <button className='btn btn-primary' onClick={showMyLocation}>
@@ -69,7 +69,7 @@ const Map2 = () => {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   )
 }
