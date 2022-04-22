@@ -1,6 +1,7 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 
 const OpenStreetMap = () => {
+  const position = [51.505, -0.09]
   return (
     <div className='container'>
       <MapContainer
