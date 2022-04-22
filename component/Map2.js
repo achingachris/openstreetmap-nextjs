@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import 'leaflet/dist/leaflet.css'
 import osm from './osm-providers'
 import useGeoLocation from './useGeoLocation'
+import { map } from 'leaflet'
 
 const markerIcon = new L.Icon({
   iconUrl: require('../public/marker.png'),
@@ -22,7 +23,7 @@ const Map2 = () => {
 
   const showMyLocation = () => {
     if (location.loaded && !location.error) {
-      mapRef.current.leafletElement.flyTo(
+      mapRef.current.LeafletElement.flyTo(
         [location.coordinates.lat, location.coordinates.lng],
         ZOOM_LEVEL,
         { animate: true }
@@ -48,7 +49,6 @@ const Map2 = () => {
                 />
                 {location.loaded && !location.error && (
                   <Marker
-                    icon={markerIcon}
                     position={[
                       location.coordinates.lat,
                       location.coordinates.lng,
